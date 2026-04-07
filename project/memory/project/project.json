@@ -6,33 +6,28 @@
   "stack": [
     {
       "name": "next",
-      "version": "14.2.13",
+      "version": "^14.0.0",
       "purpose": "React framework"
     },
     {
       "name": "react",
-      "version": "^18",
+      "version": "^18.2.0",
       "purpose": "UI library"
     },
     {
       "name": "@supabase/supabase-js",
-      "version": "^2.45.4",
-      "purpose": "Database and auth client"
+      "version": "^2.38.0",
+      "purpose": "Database and auth"
     },
     {
       "name": "openai",
-      "version": "^4.63.0",
+      "version": "^4.20.0",
       "purpose": "AI insights generation"
     },
     {
       "name": "stripe",
-      "version": "^16.12.0",
+      "version": "^14.7.0",
       "purpose": "Payment processing"
-    },
-    {
-      "name": "tailwindcss",
-      "version": "^3.4.1",
-      "purpose": "CSS framework"
     }
   ],
   "externalIntegrations": [
@@ -55,19 +50,27 @@
     {
       "service": "Stripe",
       "envVars": [
+        "STRIPE_PUBLISHABLE_KEY",
         "STRIPE_SECRET_KEY",
-        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY",
         "STRIPE_WEBHOOK_SECRET"
+      ],
+      "clientLocation": null
+    },
+    {
+      "service": "NextAuth",
+      "envVars": [
+        "NEXTAUTH_SECRET",
+        "NEXTAUTH_URL"
       ],
       "clientLocation": null
     }
   ],
   "coreUserFlows": [
-    "Users can create, edit, and delete journal entries",
-    "Users can log their mood daily",
-    "Users can view timeline of entries and moods",
-    "Paid users can generate AI insights from their journal data",
-    "Users can search through entries and tags"
+    "Create, edit, and delete journal entries",
+    "Log daily mood",
+    "View timeline of entries and moods",
+    "Generate AI insights for paid users",
+    "Search entries and tags"
   ],
   "outOfScope": []
 }

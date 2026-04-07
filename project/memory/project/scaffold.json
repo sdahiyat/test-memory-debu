@@ -17,13 +17,13 @@
       "isEmpty": false
     },
     {
-      "path": "tailwind.config.js",
-      "purpose": "Tailwind CSS setup with content paths",
+      "path": "postcss.config.js",
+      "purpose": "PostCSS config for Tailwind",
       "isEmpty": false
     },
     {
-      "path": "postcss.config.js",
-      "purpose": "PostCSS config for Tailwind",
+      "path": "tailwind.config.js",
+      "purpose": "Tailwind CSS setup with content paths",
       "isEmpty": false
     },
     {
@@ -32,18 +32,48 @@
       "isEmpty": false
     },
     {
-      "path": "src/app/page.tsx",
-      "purpose": "Landing page showcasing journaling and mood tracking features",
-      "isEmpty": false
-    },
-    {
       "path": "src/app/globals.css",
       "purpose": "Global styles with Tailwind base",
       "isEmpty": false
     },
     {
+      "path": "src/app/page.tsx",
+      "purpose": "Landing page showcasing journaling and mood tracking features",
+      "isEmpty": false
+    },
+    {
       "path": ".env.example",
       "purpose": "Environment variables for Supabase, OpenAI, Stripe, and auth",
+      "isEmpty": false
+    },
+    {
+      "path": "pr-docs/.gitkeep",
+      "purpose": "Placeholder to keep directory in git",
+      "isEmpty": false
+    },
+    {
+      "path": "memory/.gitkeep",
+      "purpose": "Placeholder to keep directory in git",
+      "isEmpty": false
+    },
+    {
+      "path": "memory/project/.gitkeep",
+      "purpose": "Placeholder to keep directory in git",
+      "isEmpty": false
+    },
+    {
+      "path": "memory/task/.gitkeep",
+      "purpose": "Placeholder to keep directory in git",
+      "isEmpty": false
+    },
+    {
+      "path": "memory/agent/.gitkeep",
+      "purpose": "Placeholder to keep directory in git",
+      "isEmpty": false
+    },
+    {
+      "path": "memory/context/.gitkeep",
+      "purpose": "Placeholder to keep directory in git",
       "isEmpty": false
     }
   ],

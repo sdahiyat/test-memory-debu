@@ -3,36 +3,32 @@
   "featuresNotYetImplemented": [
     {
       "name": "Journal entries management",
-      "description": "Create, edit, and delete journal entries with content.",
+      "description": "Users can create, edit, and delete journal entries with content.",
       "needs": [
         "pages",
         "API routes",
-        "DB tables",
-        "forms"
+        "DB tables"
       ]
     },
     {
       "name": "Mood logging",
-      "description": "Daily mood tracking with logging functionality.",
+      "description": "Users can log their daily mood up to 3 times per day.",
       "needs": [
         "pages",
         "API routes",
-        "DB tables",
-        "UI components"
+        "DB tables"
       ]
     },
     {
       "name": "Timeline view",
-      "description": "View entries and moods in chronological timeline format.",
+      "description": "Users can view a timeline of their entries and moods.",
       "needs": [
-        "pages",
-        "components",
-        "data fetching"
+        "pages"
       ]
     },
     {
-      "name": "AI insights generation",
-      "description": "AI-generated reflections and insights for paid users.",
+      "name": "AI insights",
+      "description": "Paid users can generate AI-powered insights from their journal data.",
       "needs": [
         "API routes",
         "OpenAI integration",
@@ -41,38 +37,34 @@
     },
     {
       "name": "Search functionality",
-      "description": "Search through entries and tags.",
+      "description": "Users can search through their entries and tags.",
       "needs": [
-        "API routes",
-        "search UI",
-        "indexing"
+        "pages",
+        "API routes"
       ]
     },
     {
       "name": "User authentication",
-      "description": "User registration and login system.",
+      "description": "Users can sign up, log in, and manage their accounts.",
       "needs": [
-        "auth setup",
-        "protected routes",
-        "session management"
-      ]
-    },
-    {
-      "name": "Payment system",
-      "description": "Stripe integration for AI feature payments.",
-      "needs": [
-        "Stripe setup",
-        "subscription management",
-        "payment flows"
+        "auth system",
+        "pages"
       ]
     },
     {
       "name": "Usage limits enforcement",
-      "description": "Enforce 5 entries/day and 3 mood logs/day for free users.",
+      "description": "Free users are limited to 5 entries per day and 3 mood logs per day.",
       "needs": [
-        "middleware",
-        "rate limiting",
-        "user tier checking"
+        "API routes",
+        "middleware"
+      ]
+    },
+    {
+      "name": "Payment integration",
+      "description": "Users can pay for AI features through Stripe integration.",
+      "needs": [
+        "API routes",
+        "Stripe integration"
       ]
     }
   ],
@@ -91,7 +83,7 @@
           "notes": null
         }
       ],
-      "schemaDetailsInSpec": true
+      "schemaDetailsInSpec": false
     },
     {
       "name": "Entry",
@@ -104,7 +96,7 @@
         {
           "name": "user_id",
           "type": "uuid",
-          "notes": "Foreign key to User"
+          "notes": "Foreign key to User table"
         },
         {
           "name": "content",
@@ -130,12 +122,12 @@
         {
           "name": "user_id",
           "type": "uuid",
-          "notes": "Foreign key to User"
+          "notes": "Foreign key to User table"
         },
         {
           "name": "mood",
-          "type": "text",
-          "notes": null
+          "type": null,
+          "notes": "Type not specified in spec"
         },
         {
           "name": "created_at",
@@ -168,25 +160,25 @@
     {
       "method": "GET",
       "path": "/api/entries",
-      "description": "Get user's journal entries for timeline view",
+      "description": "Retrieve journal entries for the timeline view",
       "authRequired": true
     },
     {
       "method": "POST",
       "path": "/api/mood",
-      "description": "Log a daily mood entry",
+      "description": "Log a mood entry",
       "authRequired": true
     },
     {
       "method": "GET",
       "path": "/api/mood",
-      "description": "Get user's mood logs for timeline view",
+      "description": "Retrieve mood logs for the timeline view",
       "authRequired": true
     },
     {
       "method": "POST",
       "path": "/api/insights",
-      "description": "Generate AI insights and reflections for paid users",
+      "description": "Generate AI-powered insights from journal data",
       "authRequired": true
     },
     {
@@ -197,10 +189,11 @@
     }
   ],
   "openQuestions": [
-    "What specific mood values or scale should be used for mood logging?",
-    "How should the AI insights be structured and displayed?",
-    "What constitutes a 'tag' for search functionality?",
-    "Should the timeline view paginate or load all entries?",
-    "What payment tiers and pricing should be implemented for AI features?"
+    "What is the data type and range for the mood field in MoodLog?",
+    "What payment tiers and pricing structure should be implemented for AI features?",
+    "How should the search functionality work - full-text search, tag-based, or both?",
+    "What specific AI insights should be generated and how should they be presented?",
+    "How should the timeline view display entries and moods - chronologically mixed or separated?",
+    "What user settings should be available on the settings page?"
   ]
 }
