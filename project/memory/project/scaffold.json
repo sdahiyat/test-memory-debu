@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "cofabric.memory.scaffold.v1",
+  "fileTree": [
+    {
+      "path": "package.json",
+      "purpose": "Next.js app with Supabase, OpenAI, Stripe dependencies",
+      "isEmpty": false
+    },
+    {
+      "path": "tsconfig.json",
+      "purpose": "TypeScript config with path mapping",
+      "isEmpty": false
+    },
+    {
+      "path": "next.config.js",
+      "purpose": "Minimal Next.js config for app directory",
+      "isEmpty": false
+    },
+    {
+      "path": "postcss.config.js",
+      "purpose": "PostCSS config for Tailwind",
+      "isEmpty": false
+    },
+    {
+      "path": "tailwind.config.js",
+      "purpose": "Tailwind CSS setup with content paths",
+      "isEmpty": false
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "purpose": "Root layout with Mindful Journal metadata",
+      "isEmpty": false
+    },
+    {
+      "path": "src/app/globals.css",
+      "purpose": "Global styles with Tailwind base",
+      "isEmpty": false
+    },
+    {
+      "path": "src/app/page.tsx",
+      "purpose": "Landing page showcasing journaling and mood tracking features",
+      "isEmpty": false
+    },
+    {
+      "path": ".env.example",
+      "purpose": "Environment variables for Supabase, OpenAI, Stripe, and auth",
+      "isEmpty": false
+    },
+    {
+      "path": "pr-docs/.gitkeep",
+      "purpose": "Placeholder to keep pr-docs directory",
+      "isEmpty": false
+    },
+    {
+      "path": "memory/.gitkeep",
+      "purpose": "Placeholder to keep memory directory",
+      "isEmpty": false
+    },
+    {
+      "path": "memory/project/.gitkeep",
+      "purpose": "Placeholder to keep memory/project directory",
+      "isEmpty": false
+    },
+    {
+      "path": "memory/task/.gitkeep",
+      "purpose": "Placeholder to keep memory/task directory",
+      "isEmpty": false
+    },
+    {
+      "path": "memory/agent/.gitkeep",
+      "purpose": "Placeholder to keep memory/agent directory",
+      "isEmpty": false
+    },
+    {
+      "path": "memory/context/.gitkeep",
+      "purpose": "Placeholder to keep memory/context directory",
+      "isEmpty": false
+    }
+  ],
+  "libraryExports": [],
+  "existingRoutes": [
+    {
+      "type": "page",
+      "path": "/",
+      "file": "src/app/page.tsx",
+      "httpMethods": null,
+      "isEmpty": false
+    }
+  ],
+  "databaseState": {
+    "migrationsExist": false,
+    "tables": []
+  },
+  "intentionallyEmpty": []
+}
