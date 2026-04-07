@@ -1,38 +1,43 @@
 {
   "schemaVersion": "cofabric.memory.project.v1",
-  "name": "mindful-journal",
+  "name": "Mindful Journal",
   "oneLineDescription": "A journaling + mood tracking web app with AI-generated reflections",
   "whatItIs": "A journaling + mood tracking web app with AI-generated reflections.",
   "stack": [
     {
-      "name": "@supabase/supabase-js",
-      "version": "^2.39.0",
-      "purpose": "database and auth"
-    },
-    {
       "name": "next",
-      "version": "^14.0.0",
+      "version": "14.2.5",
       "purpose": "React framework"
     },
     {
-      "name": "openai",
-      "version": "^4.20.0",
-      "purpose": "AI insights generation"
-    },
-    {
       "name": "react",
-      "version": "^18.0.0",
+      "version": "^18",
       "purpose": "UI library"
     },
     {
       "name": "react-dom",
-      "version": "^18.0.0",
+      "version": "^18",
       "purpose": "React DOM rendering"
     },
     {
+      "name": "@supabase/supabase-js",
+      "version": "^2.39.0",
+      "purpose": "Supabase client"
+    },
+    {
+      "name": "openai",
+      "version": "^4.38.5",
+      "purpose": "OpenAI API client"
+    },
+    {
       "name": "stripe",
-      "version": "^14.9.0",
-      "purpose": "payment processing"
+      "version": "^14.21.0",
+      "purpose": "Stripe payments"
+    },
+    {
+      "name": "tailwindcss",
+      "version": "^3.4.1",
+      "purpose": "CSS framework"
     }
   ],
   "externalIntegrations": [
@@ -40,8 +45,7 @@
       "service": "Supabase",
       "envVars": [
         "NEXT_PUBLIC_SUPABASE_URL",
-        "NEXT_PUBLIC_SUPABASE_ANON_KEY",
-        "SUPABASE_SERVICE_ROLE_KEY"
+        "NEXT_PUBLIC_SUPABASE_ANON_KEY"
       ],
       "clientLocation": null
     },
@@ -56,17 +60,25 @@
       "service": "Stripe",
       "envVars": [
         "STRIPE_SECRET_KEY",
-        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY",
-        "STRIPE_WEBHOOK_SECRET"
+        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY"
+      ],
+      "clientLocation": null
+    },
+    {
+      "service": "NextAuth",
+      "envVars": [
+        "NEXTAUTH_URL",
+        "NEXTAUTH_SECRET"
       ],
       "clientLocation": null
     }
   ],
   "coreUserFlows": [
-    "Users create, edit, and delete journal entries",
-    "Users log their daily mood up to 3 times per day",
-    "Users view timeline of entries and moods",
-    "Paid users generate AI insights from their journal data"
+    "Users can create, edit, and delete journal entries",
+    "Users can log their daily mood with a limit of 3 logs per day",
+    "Users can view a timeline of their entries and moods",
+    "Paid users can generate AI insights from their journal content",
+    "Users can search through their entries and tags"
   ],
   "outOfScope": []
 }
