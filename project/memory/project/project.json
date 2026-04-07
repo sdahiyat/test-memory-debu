@@ -6,7 +6,7 @@
   "stack": [
     {
       "name": "next",
-      "version": "14.2.5",
+      "version": "14.2.13",
       "purpose": "React framework"
     },
     {
@@ -15,24 +15,19 @@
       "purpose": "UI library"
     },
     {
-      "name": "react-dom",
-      "version": "^18",
-      "purpose": "React DOM rendering"
-    },
-    {
       "name": "@supabase/supabase-js",
-      "version": "^2.39.0",
-      "purpose": "Supabase client"
+      "version": "^2.45.4",
+      "purpose": "Database and auth client"
     },
     {
       "name": "openai",
-      "version": "^4.38.5",
-      "purpose": "OpenAI API client"
+      "version": "^4.63.0",
+      "purpose": "AI insights generation"
     },
     {
       "name": "stripe",
-      "version": "^14.21.0",
-      "purpose": "Stripe payments"
+      "version": "^16.12.0",
+      "purpose": "Payment processing"
     },
     {
       "name": "tailwindcss",
@@ -45,7 +40,8 @@
       "service": "Supabase",
       "envVars": [
         "NEXT_PUBLIC_SUPABASE_URL",
-        "NEXT_PUBLIC_SUPABASE_ANON_KEY"
+        "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+        "SUPABASE_SERVICE_ROLE_KEY"
       ],
       "clientLocation": null
     },
@@ -60,25 +56,18 @@
       "service": "Stripe",
       "envVars": [
         "STRIPE_SECRET_KEY",
-        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY"
-      ],
-      "clientLocation": null
-    },
-    {
-      "service": "NextAuth",
-      "envVars": [
-        "NEXTAUTH_URL",
-        "NEXTAUTH_SECRET"
+        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY",
+        "STRIPE_WEBHOOK_SECRET"
       ],
       "clientLocation": null
     }
   ],
   "coreUserFlows": [
     "Users can create, edit, and delete journal entries",
-    "Users can log their daily mood with a limit of 3 logs per day",
-    "Users can view a timeline of their entries and moods",
-    "Paid users can generate AI insights from their journal content",
-    "Users can search through their entries and tags"
+    "Users can log their mood daily",
+    "Users can view timeline of entries and moods",
+    "Paid users can generate AI insights from their journal data",
+    "Users can search through entries and tags"
   ],
   "outOfScope": []
 }
